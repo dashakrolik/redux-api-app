@@ -80,10 +80,12 @@ const eventUpdated = event => ({
 })
 
 export const updateEvent = (id, data) => dispatch => {
+  console.log('updateEvent test!')
   request
     .patch(`${baseUrl}/events/${id}`)
     .send(data)
     .then(response => {
+      console.log('response.body test:', response.body)
       dispatch(eventUpdated(response.body))
     })
     .catch(console.err)

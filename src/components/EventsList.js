@@ -9,11 +9,10 @@ export default function EventsList(props) {
             const { name, description, id } = item
             return <li key={id}><Link to={`/events/${id}`} >{name}</Link></li>
           })}
-        </ul>
-        
+          </ul>
         </div>
-    )
-  } else {
+        )
+      } else {
     return <p>'Loading...'</p>
   }
 }

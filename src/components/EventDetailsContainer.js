@@ -4,20 +4,20 @@ import EventDetails from './EventDetails'
 import {loadEvent, updateEvent, deleteEvent} from '../actions/events'
 
 class EventDetailsContainer extends React.Component {
-    state = { editMode: false }
+  state = { editMode: false }
   componentDidMount() {
     this.props.loadEvent(Number(this.props.match.params.id))
   }
 
   onDelete = () => {
-    this.props.deleteEvent(this.props.event.id)
+    this.props.deleteEventonEdit(this.props.event.id)
     this.props.history.push('/')
   }
 
 
 
   onEdit = () => {
-    console.log('i am button')
+    console.log('i am button edit')
     this.setState({
       editMode: true,
       formValues: {
@@ -29,6 +29,7 @@ class EventDetailsContainer extends React.Component {
   }
 
   onChange = (event) => {
+    console.log('i am on change')
     // update the formValues property with the new data from the input field
     this.setState({
       formValues: {
@@ -39,6 +40,7 @@ class EventDetailsContainer extends React.Component {
   }
 
   onSubmit = (event) => {
+    console.log('I am onSubmit')
     event.preventDefault()
     this.setState({
       editMode: false
@@ -47,10 +49,16 @@ class EventDetailsContainer extends React.Component {
   }
 
   render() {
+    console.log('EventDetailsContainer this.state.formValues test:', this.state.formValues)
     return (
       <div>
-        <EventDetails onDelete={this.onDelete} event={this.props.event}
-          onChange={this.onChange} onSubmit={this.onSubmit} onClick={this.onEdit}
+        <EventDetails
+          onDelete={this.onDelete}
+          event={this.props.event}
+          onChange={this.onChange}
+          onSubmit={this.onSubmit}
+          onClick={this.onEdit}
+          ourState={this.state.editMode}
           values={this.state.formValues} />
       </div>)
 
