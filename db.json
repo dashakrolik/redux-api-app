@@ -13,12 +13,6 @@
       "description": "The best iPhone we've build so far. For realz this time. "
     },
     {
-      "id": 3,
-      "name": "Cat-cuddling world record",
-      "date": "09-09-2021",
-      "description": "Can we has cheaseburgerz?"
-    },
-    {
       "id": 4,
       "name": "Fake-sleep meetup",
       "date": "01-02-2022",
@@ -57,12 +51,6 @@
       "eventId": 1
     },
     {
-      "id": 5,
-      "author": "Anna",
-      "body": "Men are simple things. They can survive a whole weekend with only three things: beer, boxer shorts and batteries for the remote control.",
-      "eventId": 3
-    },
-    {
       "id": 6,
       "author": "Anne",
       "body": "I saw six men kicking and punching the mother-in-law. My neighbor said “Are you going to help?” I said, “No, Six should be enough.”",
@@ -81,22 +69,10 @@
       "eventId": 5
     },
     {
-      "id": 9,
-      "author": "Yke",
-      "body": "If I roll once and you roll twice. What does that mean?",
-      "eventId": 3
-    },
-    {
       "id": 10,
       "author": "Xander",
       "body": "I like to say things twice, say things twice. It can get annoying though, annoying though.",
       "eventId": 2
-    },
-    {
-      "id": 11,
-      "author": "Zorita",
-      "body": "Sometimes I wonder if I really can. But then I think to myself, maybe I can't. But if I could, that would be good. Maybe it's all a lie?",
-      "eventId": 3
     }
   ]
 }

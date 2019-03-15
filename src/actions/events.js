@@ -2,7 +2,7 @@ import request from 'superagent'
 
 export const EVENTS_FETCHED = 'EVENTS_FETCHED'
 const baseUrl = 'http://localhost:4000'
-const idUrl = `baseUrl/events/`
+
 
 const eventsFetched = events => ({
   type: EVENTS_FETCHED,
@@ -68,6 +68,23 @@ export const deleteEvent = (id) => dispatch => {
     .delete(`${baseUrl}/events/${id}`)
     .then(response => {
       dispatch(eventDeleted(id))
+    })
+    .catch(console.err)
+}
+
+
+export const EVENT_UPDATE = 'EVENT_UPDATE'
+const eventUpdated = event => ({
+  type: EVENT_UPDATE,
+  event
+})
+
+export const updateEvent = (id, data) => dispatch => {
+  request
+    .patch(`${baseUrl}/events/${id}`)
+    .send(data)
+    .then(response => {
+      dispatch(eventUpdated(response.body))
     })
     .catch(console.err)
 }

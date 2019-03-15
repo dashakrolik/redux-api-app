@@ -3,7 +3,7 @@ import * as React from 'react'
 
 export default function EventForm(props) {
       if (!props.values) {
-        return <p>Something</p> } else {
+        return <p>Event Form</p> } else {
           const { name, date, description } = props.values
             return (<div>
             <form onSubmit={props.onSubmit}>
